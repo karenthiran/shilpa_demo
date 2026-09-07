@@ -39,7 +39,7 @@ const HomeContainer = () => {
         Title2="Stronger Organisations"
         content="At Shilpa Advisors, we bring People, Process, Performance, and Protection together under one trusted umbrella — practical, professional, and integrated solutions to strengthen your organisation and support sustainable growth."
         heroShape1="/assets/images/slider/Frame-7.png"
-        heroShape2="/assets/images/slider/hero-shp2.png"
+        heroShape2="https://res.cloudinary.com/dtqsjarsl/image/upload/v1788809158/Pillars_yardbc.png"
         buttons={{
           btn1: { label: " Get a 15-Minute Fit Call", link: calendlyAction },
           btn2: {
