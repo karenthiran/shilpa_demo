@@ -4,10 +4,10 @@ import loadBackgroudImages from "../Common/loadBackgroudImages";
 import Image from "next/image";
 import { CgPlayButtonO } from "react-icons/cg";
 
-
 const HeroBanner1 = ({
   bgmage,
   Title1,
+  Title2,
   content,
   heroShape1,
   heroShape2,
@@ -37,11 +37,11 @@ const HeroBanner1 = ({
       > */}
       <div
         className="hero-section d-flex align-items-center"
-       style={{
-        backgroundImage: `url(${bgmage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+        style={{
+          backgroundImage: `url(${bgmage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       >
         <div className="container-fluid">
           <div className="row hero-bg ">
@@ -50,7 +50,7 @@ const HeroBanner1 = ({
                 <div className="col-lg-9 ">
                   <h1 className="">{Title1}</h1>
                   <h2 className="">
-                    Global Payroll,
+                    {Title2}
                     <span className="d-none d-lg-inline">
                       <Image
                         src="/assets/images/slider/shap4.png"
@@ -58,9 +58,7 @@ const HeroBanner1 = ({
                         height={100}
                         alt="shape"
                       />
-                    </span>{" "}
-                    <br />
-                    Training & Security
+                    </span>
                   </h2>
 
                   <div className="hero-content-text-btn ">
@@ -99,8 +97,7 @@ const HeroBanner1 = ({
                             className="btn btn-outline-dark px-md-5 px-3 py-0 py-md-2 border-0"
                           >
                             {buttons.btn2.label}
-                            <CgPlayButtonO className="fs-4 ms-2"/>
-
+                            <CgPlayButtonO className="fs-4 ms-2" />
                           </button>
                         )}
                       </div>
@@ -120,7 +117,12 @@ const HeroBanner1 = ({
                   </div>
 
                   <div className="hero-all-images2">
-                    <Image src={heroShape2} alt="heroShape2" width={287} height={290} />
+                    <Image
+                      src={heroShape2}
+                      alt="heroShape2"
+                      width={287}
+                      height={290}
+                    />
                   </div>
                 </div>
               </div>

@@ -1,6 +1,9 @@
 import Image from "next/image";
 
-const VisionMissionCards = () => {
+const VisionMissionCards = ({
+  visionText = "Sri Lanka’s most trusted SME partner for turning standards into everyday practice—clarity, compliance, confidence at every site.",
+  missionText = "Simplify compliance · Automate the boring · Build capability · Measure what matters.",
+}) => {
   return (
     <div className="container my-5">
       <div className="row g-4 justify-content-center align-items-center">
@@ -8,7 +11,10 @@ const VisionMissionCards = () => {
         <div className="col-12 col-md-12 col-lg-6">
           <div className="card bg-black text-white rounded-4 p-4   VisionMissionCard">
             <div className="d-flex justify-content-between align-items-center mb-3">
-              <h2 className="fw-semibold text-white" style={{ fontSize: "40px",  }}>
+              <h2
+                className="fw-semibold text-white"
+                style={{ fontSize: "40px" }}
+              >
                 Our Vision
               </h2>
               <Image
@@ -18,9 +24,7 @@ const VisionMissionCards = () => {
                 alt="vision-icon"
               />
             </div>
-            <p >
-              Sri Lanka’s most trusted SME partner for turning standards into everyday practice—clarity, compliance, confidence at every site.
-            </p>
+            <p>{visionText}</p>
           </div>
         </div>
 
@@ -28,7 +32,10 @@ const VisionMissionCards = () => {
         <div className="col-12 col-md-12 col-lg-6">
           <div className="card bg-black text-white rounded-4 p-4  VisionMissionCard">
             <div className="d-flex justify-content-between align-items-center mb-3">
-              <h2 className="fw-semibold text-white" style={{ fontSize: "40px",}}>
+              <h2
+                className="fw-semibold text-white"
+                style={{ fontSize: "40px" }}
+              >
                 Our Mission
               </h2>
               <Image
@@ -38,10 +45,7 @@ const VisionMissionCards = () => {
                 alt="mission-icon"
               />
             </div>
-            <p  >
-              Simplify compliance · Automate the boring · Build capability · Measure what matters.
-
-            </p>
+            <p>{missionText}</p>
           </div>
         </div>
       </div>
