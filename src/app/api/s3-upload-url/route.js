@@ -1,58 +1,38 @@
-import AWS from 'aws-sdk';
+import { v2 as cloudinary } from "cloudinary";
 
-const s3 = new AWS.S3({
-    region: process.env.NEXT_PUBLIC_AWS_REGION,
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
 export async function POST(req) {
-    try {
-        const formData = await req.formData();
-        const file = formData.get('file');
-        
-        if (!file) {
-            return Response.json({ error: 'No file provided' }, { status: 400 });
-        }
+  try {
+    const formData = await req.formData();
+    const file = formData.get("file");
 
-        const bytes = await file.arrayBuffer();
-        const buffer = Buffer.from(bytes);
-
-        const fileName = `${Date.now()}${file.name}`;
-        const key = `avatars/${fileName}`;
-
-        console.log(
-            process.env.NEXT_PUBLIC_AWS_REGION,
-            process.env.AWS_ACCESS_KEY_ID,
-            process.env.AWS_SECRET_ACCESS_KEY
-        );
-        
-
-        // Upload directly to S3 from server
-        const uploadParams = {
-            Bucket: process.env.NEXT_PUBLIC_S3_BUCKET_NAME,
-            Key: key,
-            Body: buffer,
-            ContentType: file.type,
-            // ACL: 'public-read', // Optional
-        };
-
-         
-        await s3.upload(uploadParams).promise();
-
-        const fileUrl = `https://${process.env.NEXT_PUBLIC_S3_BUCKET_NAME}.s3.${process.env.NEXT_PUBLIC_AWS_REGION}.amazonaws.com/${key}`;
-
-        console.log();
-        
-
-        return Response.json({
-            success: true,
-            url: fileUrl,
-            key: key
-        });
-
-    } catch (error) {
-        console.error('Upload error:', error);
-        return Response.json({ error: 'Upload failed' }, { status: 500 });
+    if (!file) {
+      return Response.json({ error: "No file provided" }, { status: 400 });
     }
+
+    const bytes = await file.arrayBuffer();
+    const buffer = Buffer.from(bytes);
+
+    const result = await new Promise((resolve, reject) => {
+      const stream = cloudinary.uploader.upload_stream(
+        { folder: "avatars" },
+        (error, result) => (error ? reject(error) : resolve(result)),
+      );
+      stream.end(buffer);
+    });
+
+    return Response.json({
+      success: true,
+      url: result.secure_url,
+      key: result.public_id,
+    });
+  } catch (error) {
+    console.error("Upload error:", error);
+    return Response.json({ error: "Upload failed" }, { status: 500 });
+  }
 }

@@ -1,11 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    // domains: ['www.qcsstudio.com','qcsstudio.vercel.app' , 'lh3.googleusercontent.com','media.licdn.com'],
     remotePatterns: [
       {
         protocol: "https",
-        hostname: `shilpa-advisors.s3.eu-north-1.amazonaws.com`,
+        hostname: "res.cloudinary.com",
       },
       {
         protocol: "https",
@@ -30,11 +29,9 @@ const nextConfig = {
     ],
   },
 
-
   async headers() {
     return [
       {
-        // Cache Images, Fonts, Icons for 1 Year
         source: "/:all*(png|jpg|jpeg|gif|svg|webp|ico|woff|woff2)",
         headers: [
           {
@@ -44,7 +41,6 @@ const nextConfig = {
         ],
       },
       {
-        // Cache JS & CSS for 1 Week
         source: "/:all*(js|css)",
         headers: [
           {
@@ -54,7 +50,6 @@ const nextConfig = {
         ],
       },
       {
-        // Cache Next.js static files
         source: "/_next/static/:path*",
         headers: [
           {
@@ -65,7 +60,6 @@ const nextConfig = {
       },
     ];
   },
-
 };
 
 export default nextConfig;
