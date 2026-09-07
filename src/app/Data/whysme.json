@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "/assets/images/resource/chose1.png",
+    "title": "Compliance that works",
+    "desc": " SOPs and HR/Payroll flows people actually use—no binder theatre."
+  },
+  {
+    "icon": "/assets/images/resource/chose2.png",
+    "title": " Customisable HRMS",
+    "desc": " OT slabs, multi-level approvals, bilingual payslips, bank files, report packs."
+  },
+  {
+    "icon": "/assets/images/resource/chose3.png",
+    "title": "Audit-day calm",
+    "desc": " Internal audits, rehearsals, and surveillance readiness."
+  } 
+]

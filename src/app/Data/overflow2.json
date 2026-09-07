@@ -1,0 +1,52 @@
+[
+    {
+        "number": 1,
+        "title": "Candidate CV Submission",
+        "content":
+            "Candidates submit CVs through our recruitment platform or shared channels. All profiles are stored in a centralized system for easy access and tracking."
+    },
+    {
+        "number": 2,
+        "title": " Resume Screening & Shortlisting",
+        "content":
+            "Our experienced HR professionals screen resumes based on job requirements, skills, experience, and cultural fit. Only relevant and qualified profiles are shortlisted, saving valuable management time."
+    },
+    {
+        "number": 3,
+        "title": " Interview Coordination & Scheduling",
+        "content":
+            "We manage the complete interview process, including:"
+    },
+    {
+        "number": 4,
+        "title": "Selection, Offer & Documentation",
+        "content":
+            "Once a candidate is selected:"
+    },
+    {
+        "number": 5,
+        "title": "Complete Onboarding Management",
+        "content":
+            "We handle structured onboarding, including:"
+    },
+    {
+        "number": 6,
+        "title": " Employee Lifecycle Management",
+        "content":
+            "During active employment, we manage day-to-day HR operations such as:"
+    },
+    {
+        "number": 7,
+        "title": " Payroll & Statutory Compliance Management",
+        "content":
+            "During active employment, we manage day-to-day HR operations such as:"
+    },
+    {
+        "number": 8,
+        "title": "Exit Management & Full & Final Settlement",
+        "content":
+            "During active employment, we manage day-to-day HR operations such as:"
+    }
+
+    
+]

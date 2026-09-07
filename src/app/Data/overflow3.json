@@ -1,0 +1,40 @@
+[
+    {
+        "number": 1,
+        "title": "End-to-End HR Automation",
+        "content":
+            "Manage recruitment, onboarding, attendance, payroll, compliance, performance, and exits on one integrated platform."
+    },
+    {
+        "number": 2,
+        "title": "Time & Cost Efficiency",
+        "content":
+            " Reduce manual work, paperwork, and errors for faster processing and lower HR costs."
+    },
+    {
+        "number": 3,
+        "title": "Accurate Compliance Management",
+        "content":
+            "Built-in statutory compliance ensures precise calculations and timely filings, minimizing risks and penalties."
+    },
+    {
+        "number": 4,
+        "title": "Enhanced Employee Experience",
+        "content":
+            "ESS portal offers transparency and convenience, improving satisfaction and reducing routine HR queries."
+    },
+    {
+        "number": 5,
+        "title": "Real-Time Insights & Reporting",
+        "content":
+            "Dashboards and reports provide instant workforce visibility for informed decision-making."
+    },
+    {
+        "number": 6,
+        "title": "Secure, Scalable & Standardized System",
+        "content":
+            "Centralized data with role-based access, standardized workflows, and easy scalability to support business growth."
+    }
+
+    
+]

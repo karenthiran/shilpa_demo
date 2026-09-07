@@ -1,0 +1,40 @@
+[
+    {
+        "number": 1,
+        "title": "Employee Lifecycle Management",
+        "content":
+            "Manage employee records from onboarding to exit with a centralized database that is secure, organized, and easy to access."
+    },
+    {
+        "number": 2,
+        "title": "Payroll Management",
+        "content":
+            "Accurate and timely payroll processing with automated salary calculations, payslips, reimbursements, and deductions."
+    },
+    {
+        "number": 3,
+        "title": "Attendance & Leave Management",
+        "content":
+            "Track attendance, shifts, overtime, and leave balances with automated approvals and reports."
+    },
+    {
+        "number": 4,
+        "title": "Performance Management System (PMS)",
+        "content":
+            "Set goals, track performance, conduct appraisals, and generate performance reports to drive productivity."
+    },
+    {
+        "number": 5,
+        "title": "Statutory Compliance Automation",
+        "content":
+            "Built-in compliance for PF, ESI, PT, TDS, and other statutory requirements to avoid penalties and errors."
+    },
+    {
+        "number": 6,
+        "title": "Employee Self-Service (ESS)",
+        "content":
+            "Employees can view payslips, apply for leave, update personal details, and access HR policies anytime, anywhere"
+    }
+
+    
+]
