@@ -33,7 +33,14 @@ const BackgroundMusic = () => {
       removeInteractionListeners();
     };
 
-    const interactionEvents = ["click", "scroll", "keydown", "touchstart"];
+    const interactionEvents = [
+      "click",
+      "scroll",
+      "keydown",
+      "touchstart",
+      "mousemove",
+      "pointerdown",
+    ];
     const removeInteractionListeners = () => {
       interactionEvents.forEach((evt) =>
         window.removeEventListener(evt, startOnInteraction),
