@@ -1,21 +1,34 @@
 import React from "react";
+import Image from "next/image";
 
 const pillars = [
   {
     heading: "People",
     tagline: "People make the organisation.",
+    image:
+      "https://res.cloudinary.com/dtqsjarsl/image/upload/v1788942992/People_oliw70.png",
+    color: "#3f7d3f",
   },
   {
     heading: "Process",
     tagline: "Processes make it consistent.",
+    image:
+      "https://res.cloudinary.com/dtqsjarsl/image/upload/v1788942992/Process_lja1nl.png",
+    color: "#d4a017",
   },
   {
     heading: "Performance",
     tagline: "Performance makes it successful.",
+    image:
+      "https://res.cloudinary.com/dtqsjarsl/image/upload/v1788942992/Performance_l1rdtx.png",
+    color: "#1f4e79",
   },
   {
     heading: "Protection",
     tagline: "Protection makes it sustainable.",
+    image:
+      "https://res.cloudinary.com/dtqsjarsl/image/upload/v1788942992/Protection_meilae.png",
+    color: "#c1571f",
   },
 ];
 
@@ -41,9 +54,22 @@ const FourPillars = () => {
         <div className="row">
           {pillars.map((item, i) => (
             <div key={i} className="col-lg-3 col-md-6">
-              <div className="feature-single-box feature-height">
+              <div className="pillar-card">
+                <div className="pillar-image-wrap">
+                  <Image
+                    src={item.image}
+                    alt={item.heading}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                    className="pillar-image"
+                  />
+                  <span
+                    className="pillar-accent"
+                    style={{ background: item.color }}
+                  ></span>
+                </div>
                 <div className="feature-content">
-                  <h2>{item.heading}</h2>
+                  <h2 style={{ color: item.color }}>{item.heading}</h2>
                   <p>{item.tagline}</p>
                 </div>
               </div>

@@ -35,8 +35,6 @@ const HomeContainer = () => {
     <div>
       <HeroBanner1
         bgmage="/assets/images/slider/hero-bg.avif"
-        Title1="One Partner. Four Pillars."
-        Title2="Stronger Organisations"
         content="At Shilpa Advisors, we bring People, Process, Performance, and Protection together under one trusted umbrella — practical, professional, and integrated solutions to strengthen your organisation and support sustainable growth."
         heroShape1="/assets/images/slider/Frame-7.png"
         heroShape2="https://res.cloudinary.com/dtqsjarsl/image/upload/v1788809158/Pillars_yardbc.png"

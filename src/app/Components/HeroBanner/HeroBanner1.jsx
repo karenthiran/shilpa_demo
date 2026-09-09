@@ -39,27 +39,27 @@ const HeroBanner1 = ({
         className="hero-section d-flex align-items-center"
         style={{
           backgroundImage: `url(${heroShape2})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
         }}
       >
         <div className="container-fluid">
           <div className="row hero-bg ">
             <div className="col-lg-12 mx-2 mx-lg-5">
-              <div className="hero-content d-flex gap-2 ">
-                <div className="col-lg-9 ">
-                  <h1 className="">{Title1}</h1>
-                  <h2 className="">
-                    {Title2}
-                    <span className="d-none d-lg-inline">
-                      <Image
-                        src="/assets/images/slider/shap4.png"
-                        width={200}
-                        height={100}
-                        alt="shape"
-                      />
-                    </span>
-                  </h2>
+              <div className="hero-content position-relative text-center gap-2 ">
+                <div className="mx-auto" style={{ maxWidth: "820px" }}>
+                  {Title1 && <h1 className="">{Title1}</h1>}
+                  {Title2 && (
+                    <h2 className="">
+                      {Title2}
+                      <span className="d-none d-lg-inline">
+                        <Image
+                          src="/assets/images/slider/shap4.png"
+                          width={200}
+                          height={100}
+                          alt="shape"
+                        />
+                      </span>
+                    </h2>
+                  )}
 
                   <div className="hero-content-text-btn ">
                     <Image
@@ -67,23 +67,19 @@ const HeroBanner1 = ({
                       alt="arrow-image"
                       width={1350}
                       height={50}
-                      className="d-flex justify-content-start"
+                      className="d-flex justify-content-center mx-auto"
                     />
                     <p>{content}</p>
 
                     <div className="hero-button">
                       <div
-                        className={`d-flex gap-4 mt-4 flex-wrap hero-button ${
-                          buttons.btn2
-                            ? "justify-content-start"
-                            : "justify-content-center"
-                        }`}
+                        className="d-flex gap-4 mt-4 flex-wrap hero-button justify-content-center"
                       >
                         {/* Button 1 */}
                         {buttons.btn1?.label && (
                           <button
                             onClick={buttons.btn1?.link || "#"}
-                            className="rounded-2 bg-black text-white px-md-5 px-4 py-1 py-md-2 border-0"
+                            className="rounded-2 hero-btn-primary px-md-5 px-4 py-1 py-md-2 border-0"
                           >
                             {buttons.btn1.label}
                             <i className="bi bi-arrow-right-short ms-2"></i>
@@ -94,7 +90,7 @@ const HeroBanner1 = ({
                         {buttons.btn2?.label && (
                           <button
                             onClick={() => setShowModal(true)}
-                            className="btn btn-outline-light text-white px-md-5 px-3 py-0 py-md-2 border-0"
+                            className="rounded-2 hero-btn-secondary px-md-5 px-3 py-0 py-md-2"
                           >
                             {buttons.btn2.label}
                             <CgPlayButtonO className="fs-4 ms-2" />
@@ -106,7 +102,7 @@ const HeroBanner1 = ({
                 </div>
 
                 {/* Hero right images */}
-                <div className="col-lg-3 hero-all-images d-none d-lg-block ">
+                <div className="hero-all-images d-none d-lg-block ">
                   <div className="position-absolute hero-all-images1">
                     <Image
                       src={heroShape1}
