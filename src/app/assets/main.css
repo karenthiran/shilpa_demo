@@ -1364,6 +1364,26 @@ img {
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.55);
 }
 
+/* Home page header sits on top of the dark hero image, so force nav text to white at every breakpoint.
+   Skip this once the header becomes the sticky (scrolled) light-grey bar, which still needs dark text. */
+.cs_home_dark_header:not(.cs-gescout_sticky) .cs_nav .cs_nav_list > li > a {
+  color: #ffffff !important;
+}
+
+.cs_home_dark_header:not(.cs-gescout_sticky)
+  .cs_nav
+  .cs_nav_list
+  > li
+  > a:hover {
+  color: #ffde5d !important;
+}
+
+.cs_home_dark_header:not(.cs-gescout_sticky) .cs-munu_toggle span,
+.cs_home_dark_header:not(.cs-gescout_sticky) .cs-munu_toggle:before,
+.cs_home_dark_header:not(.cs-gescout_sticky) .cs-munu_toggle:after {
+  background-color: #ffffff;
+}
+
 /* .hero-content p {
     font-size: 18px;
     width: 50%;
