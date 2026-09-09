@@ -17,6 +17,7 @@ import "./global.css";
 
 import Script from "next/script";
 import CalendlyBadge from "./Components/CalendlyBadge/CalendlyBadge";
+import BackgroundMusic from "./Components/BackgroundMusic/BackgroundMusic";
 
 const kumbh_sans = Kumbh_Sans({
   subsets: ["latin"],
@@ -86,6 +87,7 @@ export default function RootLayout({ children }) {
 
         {children}
         <CalendlyBadge />
+        <BackgroundMusic />
       </body>
     </html>
   );
