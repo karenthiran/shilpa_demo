@@ -50,18 +50,20 @@ const HeroBanner1 = ({
             <div className="col-lg-12 mx-2 mx-lg-5">
               <div className="hero-content d-flex gap-2 ">
                 <div className="col-lg-9 ">
-                  <h1 className="">{Title1}</h1>
-                  <h2 className="">
-                    {Title2}
-                    <span className="d-none d-lg-inline">
-                      <Image
-                        src="/assets/images/slider/shap4.png"
-                        width={200}
-                        height={100}
-                        alt="shape"
-                      />
-                    </span>
-                  </h2>
+                  {Title1 && <h1 className="">{Title1}</h1>}
+                  {Title2 && (
+                    <h2 className="">
+                      {Title2}
+                      <span className="d-none d-lg-inline">
+                        <Image
+                          src="/assets/images/slider/shap4.png"
+                          width={200}
+                          height={100}
+                          alt="shape"
+                        />
+                      </span>
+                    </h2>
+                  )}
 
                   <div className="hero-content-text-btn ">
                     <Image
