@@ -1248,10 +1248,17 @@ img {
 .hero-section {
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-color: #101210;
   height: 900px;
   position: relative;
   overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  .hero-section {
+    background-size: 100% auto;
+  }
 }
 
 .hero-section::before {
