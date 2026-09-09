@@ -48,7 +48,7 @@ const HeroBanner1 = ({
         <div className="container-fluid">
           <div className="row hero-bg ">
             <div className="col-lg-12 mx-2 mx-lg-5">
-              <div className="hero-content d-flex gap-2 ">
+              <div className="hero-content d-flex justify-content-center text-center gap-2 ">
                 <div className="col-lg-9 ">
                   {Title1 && <h1 className="">{Title1}</h1>}
                   {Title2 && (
@@ -71,17 +71,13 @@ const HeroBanner1 = ({
                       alt="arrow-image"
                       width={1350}
                       height={50}
-                      className="d-flex justify-content-start"
+                      className="d-flex justify-content-center mx-auto"
                     />
                     <p>{content}</p>
 
                     <div className="hero-button">
                       <div
-                        className={`d-flex gap-4 mt-4 flex-wrap hero-button ${
-                          buttons.btn2
-                            ? "justify-content-start"
-                            : "justify-content-center"
-                        }`}
+                        className="d-flex gap-4 mt-4 flex-wrap hero-button justify-content-center"
                       >
                         {/* Button 1 */}
                         {buttons.btn1?.label && (
