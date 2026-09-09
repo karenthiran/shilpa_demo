@@ -1248,22 +1248,24 @@ img {
 .hero-section {
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-color: #101210;
   height: 900px;
   position: relative;
   overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  .hero-section {
+    background-size: 100% auto;
+    background-position: center top;
+  }
 }
 
 .hero-section::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.78) 0%,
-    rgba(0, 0, 0, 0.55) 45%,
-    rgba(0, 0, 0, 0.2) 100%
-  );
   z-index: 0;
 }
 
@@ -1301,7 +1303,7 @@ img {
   line-height: 60px;
   font-weight: 600;
   display: inline-block;
-  text-align: start;
+  text-align: center;
   width: 100%;
   color: #ffffff;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.65);
@@ -1315,7 +1317,7 @@ img {
   font-size: 100px;
   font-weight: 500;
   position: relative;
-  text-align: start;
+  text-align: center;
   color: #ffffff;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.65);
 }
@@ -1328,7 +1330,9 @@ img {
 }
 
 .hero-all-images {
-  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
   /* border: 1px solid red; */
 }
 
@@ -1355,13 +1359,24 @@ img {
   visibility: visible;
 }
 
+.hero-content-text-btn {
+  margin-top: 76px;
+}
+
 .hero-content p {
   font-size: 20px;
   width: 637px;
-  text-align: start;
-  color: #f2f2f2;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: #ffffff;
   font-weight: 500;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.55);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
+  background: rgba(10, 11, 10, 0.65);
+  backdrop-filter: blur(4px);
+  border-radius: 12px;
+  padding: 18px 24px;
 }
 
 /* Home page header sits on top of the dark hero image, so force nav text to white at every breakpoint.
@@ -1393,7 +1408,7 @@ img {
 } */
 
 .hero-button {
-  text-align: start;
+  text-align: center;
 }
 
 .hero-button a {
@@ -1845,6 +1860,57 @@ img {
 
 .feature-single-box:hover {
   margin-top: -20px;
+}
+
+.pillar-card {
+  margin-bottom: 30px;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  filter: drop-shadow(0px 5px 15px rgba(215, 215, 217, 0.3));
+  transition: 0.35s;
+  height: 100%;
+}
+
+.pillar-card:hover {
+  transform: translateY(-10px);
+}
+
+.pillar-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  background: #101210;
+}
+
+.pillar-image {
+  object-fit: cover;
+}
+
+.pillar-accent {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 5px;
+  display: block;
+}
+
+.pillar-card .feature-content {
+  text-align: center;
+  padding: 20px 20px 28px;
+}
+
+.pillar-card .feature-content h2 {
+  font-size: 22px;
+  font-weight: 600;
+  padding: 0 0 10px;
+  white-space: normal;
+}
+
+.pillar-card .feature-content p {
+  font-size: 15px;
+  margin: 0;
 }
 
 /*Feature Section Style Two */
@@ -2536,6 +2602,17 @@ span.video-title {
     font-size: 13px;
     height: 380px;
   }
+}
+
+.service-content-icon {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  flex-shrink: 0;
+}
+
+.service-content-icon-img {
+  object-fit: contain;
 }
 
 h3.service-title {
@@ -7001,8 +7078,9 @@ ul.list-style-one li a:hover {
   font-size: 16px;
   padding: 12px 30px 14px;
   font-weight: 500;
-  color: #fff;
-  background: #101210;
+  color: #101210;
+  background: #ffde5d;
+  border: 2px solid #ffde5d;
   border-radius: 5px;
   display: inline-block;
   position: relative;
@@ -7019,14 +7097,14 @@ ul.list-style-one li a:hover {
   right: 0;
   bottom: 0;
   border-radius: 5px;
-  background: #ffde5d;
+  background: #101210;
   transform: scale(0);
   transition: 0.5s;
 }
 /*------Hero btns---------*/
 .hero-button {
   display: flex;
-  justify-content: start;
+  justify-content: center;
 }
 .hero-button button {
   font-size: 16px;
@@ -7063,11 +7141,35 @@ ul.list-style-one li a:hover {
 }
 /* ------end hero btns----- */
 
+.hero-button .hero-btn-primary {
+  background: #ffde5d;
+  color: #101210;
+  font-weight: 600;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+
+.hero-button .hero-btn-primary:hover {
+  background: #ffffff;
+  color: #101210;
+}
+
+.hero-button .hero-btn-secondary {
+  background: rgba(16, 18, 16, 0.55);
+  color: #ffffff;
+  border: 2px solid #ffde5d;
+  backdrop-filter: blur(2px);
+}
+
+.hero-button .hero-btn-secondary:hover {
+  background: #ffde5d;
+  color: #101210;
+}
+
 .header-button a i {
   padding-right: 5px;
   position: relative;
   top: 3px;
-  color: #ffde5d;
+  color: #101210;
   transition: 0.5s;
 }
 
@@ -7076,11 +7178,11 @@ ul.list-style-one li a:hover {
 }
 
 .header-button a:hover {
-  color: #101210;
+  color: #ffde5d;
 }
 
 .header-button a:hover i {
-  color: #101210;
+  color: #ffde5d;
 }
 
 .cs_slider_gap_30 .slick-slide {
