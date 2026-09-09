@@ -38,7 +38,7 @@ const HeroBanner1 = ({
       <div
         className="hero-section d-flex align-items-center"
         style={{
-          backgroundImage: `url(${bgmage})`,
+          backgroundImage: `url(${heroShape2})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -113,15 +113,6 @@ const HeroBanner1 = ({
                       alt="heroShape1"
                       width={300}
                       height={150}
-                    />
-                  </div>
-
-                  <div className="hero-all-images2">
-                    <Image
-                      src={heroShape2}
-                      alt="heroShape2"
-                      width={287}
-                      height={290}
                     />
                   </div>
                 </div>
