@@ -39,8 +39,10 @@ const HeroBanner1 = ({
         className="hero-section d-flex align-items-center"
         style={{
           backgroundImage: `url(${heroShape2})`,
-          backgroundSize: "cover",
+          backgroundSize: "contain",
           backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundColor: "#101210",
         }}
       >
         <div className="container-fluid">
