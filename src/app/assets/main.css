@@ -1258,12 +1258,6 @@ img {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.78) 0%,
-    rgba(0, 0, 0, 0.55) 45%,
-    rgba(0, 0, 0, 0.2) 100%
-  );
   z-index: 0;
 }
 
@@ -1301,7 +1295,7 @@ img {
   line-height: 60px;
   font-weight: 600;
   display: inline-block;
-  text-align: start;
+  text-align: center;
   width: 100%;
   color: #ffffff;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.65);
@@ -1315,7 +1309,7 @@ img {
   font-size: 100px;
   font-weight: 500;
   position: relative;
-  text-align: start;
+  text-align: center;
   color: #ffffff;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.65);
 }
@@ -1358,7 +1352,10 @@ img {
 .hero-content p {
   font-size: 20px;
   width: 637px;
-  text-align: start;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
   color: #f2f2f2;
   font-weight: 500;
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.55);
@@ -1393,7 +1390,7 @@ img {
 } */
 
 .hero-button {
-  text-align: start;
+  text-align: center;
 }
 
 .hero-button a {
