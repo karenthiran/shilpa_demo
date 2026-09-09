@@ -1322,7 +1322,9 @@ img {
 }
 
 .hero-all-images {
-  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
   /* border: 1px solid red; */
 }
 
@@ -7023,7 +7025,7 @@ ul.list-style-one li a:hover {
 /*------Hero btns---------*/
 .hero-button {
   display: flex;
-  justify-content: start;
+  justify-content: center;
 }
 .hero-button button {
   font-size: 16px;
@@ -7059,6 +7061,30 @@ ul.list-style-one li a:hover {
   color: #101210;
 }
 /* ------end hero btns----- */
+
+.hero-button .hero-btn-primary {
+  background: #ffde5d;
+  color: #101210;
+  font-weight: 600;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+
+.hero-button .hero-btn-primary:hover {
+  background: #ffffff;
+  color: #101210;
+}
+
+.hero-button .hero-btn-secondary {
+  background: rgba(16, 18, 16, 0.55);
+  color: #ffffff;
+  border: 2px solid #ffde5d;
+  backdrop-filter: blur(2px);
+}
+
+.hero-button .hero-btn-secondary:hover {
+  background: #ffde5d;
+  color: #101210;
+}
 
 .header-button a i {
   padding-right: 5px;
