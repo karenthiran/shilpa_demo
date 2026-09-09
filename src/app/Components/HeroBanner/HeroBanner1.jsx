@@ -94,7 +94,7 @@ const HeroBanner1 = ({
                         {buttons.btn2?.label && (
                           <button
                             onClick={() => setShowModal(true)}
-                            className="btn btn-outline-dark px-md-5 px-3 py-0 py-md-2 border-0"
+                            className="btn btn-outline-light text-white px-md-5 px-3 py-0 py-md-2 border-0"
                           >
                             {buttons.btn2.label}
                             <CgPlayButtonO className="fs-4 ms-2" />
