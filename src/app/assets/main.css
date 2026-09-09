@@ -7000,8 +7000,8 @@ ul.list-style-one li a:hover {
   font-size: 16px;
   padding: 12px 30px 14px;
   font-weight: 500;
-  color: #fff;
-  background: rgba(255, 222, 93, 0.08);
+  color: #101210;
+  background: #ffde5d;
   border: 2px solid #ffde5d;
   border-radius: 5px;
   display: inline-block;
@@ -7019,7 +7019,7 @@ ul.list-style-one li a:hover {
   right: 0;
   bottom: 0;
   border-radius: 5px;
-  background: #ffde5d;
+  background: #101210;
   transform: scale(0);
   transition: 0.5s;
 }
@@ -7091,7 +7091,7 @@ ul.list-style-one li a:hover {
   padding-right: 5px;
   position: relative;
   top: 3px;
-  color: #ffde5d;
+  color: #101210;
   transition: 0.5s;
 }
 
@@ -7100,11 +7100,11 @@ ul.list-style-one li a:hover {
 }
 
 .header-button a:hover {
-  color: #101210;
+  color: #ffde5d;
 }
 
 .header-button a:hover i {
-  color: #101210;
+  color: #ffde5d;
 }
 
 .cs_slider_gap_30 .slick-slide {
