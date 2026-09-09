@@ -1,75 +1,168 @@
 "use client";
-import { handleuseCalendly } from "@/app/Components/CalendlyBadge/CalendlyBadge";
-import Cta from "@/app/Components/Cta/Cta";
-import Faq from "@/app/Components/Faq/Faq";
-import Feature1 from "@/app/Components/Feature/Feature1";
-import HeroBanner1 from "@/app/Components/HeroBanner/HeroBanner1";
-import FourPillars from "@/app/Components/Home/FourPillars";
-import HomeResources from "@/app/Components/Home/HomeResources";
-import WhyChoose from "@/app/Components/Home/WhyChoose";
-import VisionMissionCards from "@/app/Components/About/VisionMissionCards";
-import Service1 from "@/app/Components/Services/Service1";
-import Services2 from "@/app/Components/Services/Services2";
-import Testimonial1 from "@/app/Components/Testimonial/Testimonial1";
-import { home_Faq1, home_Faq2 } from "@/app/Data/questions";
-import { resourceData } from "@/app/Data/Resources/HomeReources";
-import { howWework } from "@/app/Data/services2";
-import React from "react";
+import { useEffect, useState } from "react";
+import loadBackgroudImages from "../Common/loadBackgroudImages";
+import Image from "next/image";
+import { CgPlayButtonO } from "react-icons/cg";
 
-const HomeContainer = () => {
-  const HeadingContent = {
-    title1: "Services",
-    Content:
-      "FOUR PILLARS → FOUR SOLUTION AREAS → INDIVIDUAL SERVICES. From HRMS payroll (EPF/ETF/APIT) to ISO certification, Employee Training & OBT (Kitulgala), and Private Security SOPs, we turn standards into daily practice for Asian SMEs. Fast rollouts, practical tools, and audit-ready results—without disrupting operations.",
+const HeroBanner1 = ({
+  bgmage,
+  Title1,
+  Title2,
+  content,
+  heroShape1,
+  heroShape2,
+  buttons,
+}) => {
+  const [showModal, setShowModal] = useState(false);
+
+  // useEffect(() => {
+  //   loadBackgroudImages();
+  // }, []);
+
+  // ✅ Extract YouTube video ID
+  const getYouTubeId = (url) => {
+    const regExp =
+      /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+    const match = url?.match(regExp);
+    return match && match[2].length === 11 ? match[2] : null;
   };
-  const Service2HeadingContent = {
-    subtitle: "Improve your Business",
-    title: "How We Work",
-    Content:
-      "We make complex standards simple: discover the gaps, fix with practical docs & training, and prove with audits. You get calm month-ends, confident audit days, and a team that owns the process.",
-    mainImg: "/assets/images/slider/home-how_we_work.webp",
-  };
-  const calendlyAction = handleuseCalendly();
+
+  const videoId = getYouTubeId(buttons?.btn2?.link);
 
   return (
-    <div>
-      <HeroBanner1
-        bgmage="/assets/images/slider/hero-bg.avif"
-        Title1="One Partner. Four Pillars."
-        Title2="Stronger Organisations"
-        content="At Shilpa Advisors, we bring People, Process, Performance, and Protection together under one trusted umbrella — practical, professional, and integrated solutions to strengthen your organisation and support sustainable growth."
-        heroShape1="/assets/images/slider/Frame-7.png"
-        heroShape2="https://res.cloudinary.com/dtqsjarsl/image/upload/v1788809158/Pillars_yardbc.png"
-        buttons={{
-          btn1: { label: " Get a 15-Minute Fit Call", link: calendlyAction },
-          btn2: {
-            label: "Watch 90-sec HRMS Demo",
-            link: "https://youtu.be/COPPFiE2RwQ",
-          },
+    <>
+      {/* <div
+        className="hero-section d-flex align-items-center"
+        data-background={bgmage}
+      > */}
+      <div
+        className="hero-section d-flex align-items-center"
+        style={{
+          backgroundImage: `url(${heroShape2})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
-      />
+      >
+        <div className="container-fluid">
+          <div className="row hero-bg ">
+            <div className="col-lg-12 mx-2 mx-lg-5">
+              <div className="hero-content d-flex gap-2 ">
+                <div className="col-lg-9 ">
+                  <h1 className="">{Title1}</h1>
+                  <h2 className="">
+                    {Title2}
+                    <span className="d-none d-lg-inline">
+                      <Image
+                        src="/assets/images/slider/shap4.png"
+                        width={200}
+                        height={100}
+                        alt="shape"
+                      />
+                    </span>
+                  </h2>
 
-      <FourPillars />
-      <Feature1 />
-      <Service1 headcontent={HeadingContent} />
-      <WhyChoose />
-      <VisionMissionCards
-        visionText="To be the most trusted and affordable partner of SMEs to uplift their standards to a global level."
-        missionText="To empower businesses through suited people, simplified processes, enhanced performance, and 360-degree protection."
-      />
-      <Testimonial1 />
-      <Services2 headcontent={Service2HeadingContent} data={howWework} />
-      <HomeResources resources={resourceData} />
-      <Faq leftdata={home_Faq1} rightdata={home_Faq2} />
-      <Cta
-        title="Ready to build compliant, growth-ready operations?"
-        buttons={{
-          btn1: { label: " Get Demo", link: calendlyAction },
-          btn2: { label: "Talk to Sales", link: calendlyAction },
-        }}
-        sideicon={true}
-      />
-    </div>
+                  <div className="hero-content-text-btn ">
+                    <Image
+                      src="/assets/images/slider/hero-arrow.png"
+                      alt="arrow-image"
+                      width={1350}
+                      height={50}
+                      className="d-flex justify-content-start"
+                    />
+                    <p>{content}</p>
+
+                    <div className="hero-button">
+                      <div
+                        className={`d-flex gap-4 mt-4 flex-wrap hero-button ${
+                          buttons.btn2
+                            ? "justify-content-start"
+                            : "justify-content-center"
+                        }`}
+                      >
+                        {/* Button 1 */}
+                        {buttons.btn1?.label && (
+                          <button
+                            onClick={buttons.btn1?.link || "#"}
+                            className="rounded-2 bg-black text-white px-md-5 px-4 py-1 py-md-2 border-0"
+                          >
+                            {buttons.btn1.label}
+                            <i className="bi bi-arrow-right-short ms-2"></i>
+                          </button>
+                        )}
+
+                        {/* ✅ Button 2 — YouTube Popup */}
+                        {buttons.btn2?.label && (
+                          <button
+                            onClick={() => setShowModal(true)}
+                            className="btn btn-outline-dark px-md-5 px-3 py-0 py-md-2 border-0"
+                          >
+                            {buttons.btn2.label}
+                            <CgPlayButtonO className="fs-4 ms-2" />
+                          </button>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Hero right images */}
+                <div className="col-lg-3 hero-all-images d-none d-lg-block ">
+                  <div className="position-absolute hero-all-images1">
+                    <Image
+                      src={heroShape1}
+                      alt="heroShape1"
+                      width={300}
+                      height={150}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ✅ Video Modal */}
+      {showModal && (
+        <div
+          className="modal fade show"
+          style={{ display: "block", backgroundColor: "rgba(0,0,0,0.7)" }}
+          tabIndex="-1"
+          onClick={() => setShowModal(false)}
+        >
+          <div
+            className="modal-dialog modal-dialog-centered modal-lg"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="modal-content bg-dark border-0">
+              <div className="modal-body p-0 position-relative">
+                <button
+                  type="button"
+                  className="btn-close btn-close-white position-absolute top-0 end-0 m-3"
+                  onClick={() => setShowModal(false)}
+                ></button>
+
+                {videoId ? (
+                  <div className="ratio ratio-16x9">
+                    <iframe
+                      src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+                      title="YouTube video"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                ) : (
+                  <p className="text-white text-center p-5">
+                    Invalid YouTube link
+                  </p>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
-export default HomeContainer;
+
+export default HeroBanner1;
