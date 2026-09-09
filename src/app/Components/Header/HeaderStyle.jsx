@@ -43,14 +43,16 @@ export default function HeaderStyle({ variant }) {
         <div className="container-fluid">
           <div className="cs_main_header_in">
             <div className="cs_main_header_left">
-              <Link href="/" className="cs_site_branding">
-                <Image
-                  src="/assets/images/slider/Shilpa-Logo.svg"
-                  alt="Logo"
-                  width={124}
-                  height={26}
-                />
-              </Link>
+              {!isHome && (
+                <Link href="/" className="cs_site_branding">
+                  <Image
+                    src="/assets/images/slider/Shilpa-Logo.svg"
+                    alt="Logo"
+                    width={124}
+                    height={26}
+                  />
+                </Link>
+              )}
             </div>
             <div className="cs_main_header_center">
               <div className="cs_nav cs_primary_font fw-medium">
