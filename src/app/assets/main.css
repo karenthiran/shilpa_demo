@@ -7001,7 +7001,8 @@ ul.list-style-one li a:hover {
   padding: 12px 30px 14px;
   font-weight: 500;
   color: #fff;
-  background: #101210;
+  background: rgba(255, 222, 93, 0.08);
+  border: 2px solid #ffde5d;
   border-radius: 5px;
   display: inline-block;
   position: relative;
