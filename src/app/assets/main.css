@@ -1359,6 +1359,10 @@ img {
   visibility: visible;
 }
 
+.hero-content-text-btn {
+  margin-top: 76px;
+}
+
 .hero-content p {
   font-size: 20px;
   width: 637px;
