@@ -2615,6 +2615,45 @@ span.video-title {
   object-fit: contain;
 }
 
+.single-service-box.has-photo-bg {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.single-service-box.has-photo-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  z-index: 0;
+}
+
+.single-service-box.has-photo-bg .service-content {
+  position: relative;
+  z-index: 1;
+}
+
+.single-service-box.has-photo-bg h3.service-title {
+  color: #fff;
+}
+
+.single-service-box.has-photo-bg p.service-desc {
+  color: #f1f1f1;
+}
+
+.single-service-box.has-photo-bg .serviceCard-list ul li {
+  color: #fff;
+}
+
+.single-service-box.has-photo-bg .serviceCard-list ul li i {
+  color: #a8ff9c;
+}
+
 h3.service-title {
   font-size: 26px;
   font-weight: 500;
