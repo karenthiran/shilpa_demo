@@ -31,7 +31,12 @@ const Feature1 = () => {
         <Acheive
           mainimage="/assets/images/slider/Home-GlobalScale.png"
           title1="Built for global scale, local rules"
-          decorative
+          collageImages={[
+            "/assets/images/slider/hrms-achieve.png",
+            "/assets/images/slider/iso-achieve.webp",
+            "/assets/images/slider/etd-How _We _Make.webp",
+            "/assets/images/slider/security-achieve.png",
+          ]}
           listItem={[
             "HRMS: country taxes, social security, payslips, bank files",
             "ISO: 9001 · 45001 · 22000 · 14001 · 21001 · 39001 · HACCP/GMP",
