@@ -17,20 +17,21 @@ const Feature1 = () => {
     }
   }, [mounted]);
 
-  if (!mounted) return null; 
+  if (!mounted) return null;
 
   return (
     <div
       className="feature-section"
-    //   data-background="/assets/images/resource/feature-bg.jpg"
+      //   data-background="/assets/images/resource/feature-bg.jpg"
       style={{
-    backgroundImage: "url(/assets/images/resource/feature-bg.jpg)",
-  }}
+        backgroundImage: "url(/assets/images/resource/feature-bg.jpg)",
+      }}
     >
       <div className="container">
         <Acheive
           mainimage="/assets/images/slider/Home-GlobalScale.png"
           title1="Built for global scale, local rules"
+          decorative
           listItem={[
             "HRMS: country taxes, social security, payslips, bank files",
             "ISO: 9001 · 45001 · 22000 · 14001 · 21001 · 39001 · HACCP/GMP",
